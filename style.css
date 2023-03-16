@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+.call-to-action {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+}
+
+p,
+a {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    display: none;
+}
+
+.line {
+    height: 2px;
+    width: 24px;
+    margin-bottom: 6px;
+    background-color: #FFF;
+}
+
+.page {
+
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header Section */
+
+header {
+    width: 100%;
+    height: 538px;
+    background: url(./images/mobile/image-header.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+
+header > h1 {
+    padding: 0;
+    font-size: 40px;
+    letter-spacing: 6.25px;
+    text-align: center;
+    color: #FFF;
+    margin-top: 45px;
+}
+
+nav {
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-icon{
+    display: block;
+    margin: 45px auto;
+}
+
+/* Photo section */
+
+
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Text Section */
+
+.text {
+    height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.text > p {
+    color: hsl(210, 4%, 67%);
+    line-height: 30px;
+    letter-spacing: -0.13px;
+    font-size: 18px;
+}
+
+.call-to-action {
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+
+/* Info Section */
+
+.info {
+    height: 600px;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    
+}
+
+.info > h3 {
+    font-size: 28px;
+    margin-bottom: 27px;
+    letter-spacing: -0.2px;
+}
+
+.info > p {
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.11px;
+}
+
+.design,
+.design h3 {
+    color:hsl(167, 40%, 24%);
+}
+
+.photography,
+.photography h3 {
+    color: hsl(198, 62%, 26%);
+}
+
+
+
+/* Testimonials section */
+
+.testimonials {
+    text-align: center;
+}
+
+.testimonials > h3 {
+    color: hsl(210, 4%, 67%);
+    letter-spacing: 5px;
+}
+
+
+.client img {
+    width: 72px;
+    border-radius: 50px;
+    
+}
+
+.client  p {
+    color: hsl(213, 9%, 39%);
+    line-height: 32px;
+    font-size: 18px;
+}
+
+.client h3 {
+    font-size: 18px;
+    letter-spacing: -0.13px;
+    margin-bottom: 8px;
+}
+
+.work {
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    color: hsl(210, 4%, 67%);;
+}
+
+
+
+/* Gallery Section */
+
+
+.image img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Footer Section */
+
+footer {
+    width: 100%;
+    height: 350px;
+    background-color: #90D4C6;
+    text-align: center;
+}
+
+ footer > .logo > img {
+    width: 170px;
+    height: 32px;
+    margin-bottom: 40px;
+}
+
+footer > ul {
+    width: 80%;
+    margin: 0 auto 88px auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 72px;
+}
+
+footer  a {
+    color: hsl(168, 34%, 41%);
+    font-size: 18px;
+}
+
+
+.socials {
+    width: 50%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile Style */
+
+@media only screen and (max-width: 480px) {
+   
+
+    .text {
+        text-align: center;
+        padding: 0 25px;
+    }
+
+    .text > h2 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .text > p {
+        margin-bottom: 32px;
+    }
+
+    .design {
+        background: url(./images/mobile/image-graphic-design.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .photography {
+        background: url(./images/mobile/image-photography.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .info,
+    .testimonials,
+    footer{
+        padding: 60px 20px;
+    }
+
+    .testimonials {
+        flex-direction: column;
+    }
+
+    .testimonials > h3 {
+        font-size: 16px;
+    }
+
+    .client {
+        margin-top: 64px;
+    }
+
+    .client img,
+    .client p {
+        margin-bottom: 32px;
+    }
+
+    .image {
+        width: 50%;
+    }
+    
+}
+
+
+
+/* Tablet Style */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  
+
+    .design {
+        background: url(./images/desktop/image-graphic-design.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .photography {
+        background: url(./images/desktop/image-photography.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .testimonials {
+        width: 100%;
+    }
+
+    .image {
+        width: 25%;
+    }
+
+
+}
+
+/* Desktop Style */
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        background-color: #5995DA
+    }
+}
