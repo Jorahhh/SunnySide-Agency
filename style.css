@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
 }
 
 h1,
@@ -54,15 +55,13 @@ ul {
 header {
     width: 100%;
     height: 538px;
-    background: url(./images/mobile/image-header.jpg) no-repeat center;
+    background: url(./Images-2/mobile/header-mobile.svg) no-repeat center;
     background-size: cover;
-    
 }
 
 header > h1 {
-    padding: 0;
-    font-size: 40px;
     letter-spacing: 6.25px;
+    font-size: 2.22em;
     text-align: center;
     color: #FFF;
     margin-top: 45px;
@@ -83,7 +82,6 @@ nav {
 /* Photo section */
 
 
-
 .photo img {
     width: 100%;
     display: block;
@@ -93,11 +91,18 @@ nav {
 /* Text Section */
 
 .text {
+    text-align: center;
+    padding: 0 25px;
     height: 430px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.text > h2 {
+    font-size: 1.7em;
+    margin-bottom: 24px;
 }
 
 
@@ -106,6 +111,8 @@ nav {
     line-height: 30px;
     letter-spacing: -0.13px;
     font-size: 18px;
+
+    margin-bottom: 32px;
 }
 
 .call-to-action {
@@ -148,30 +155,54 @@ nav {
     color: hsl(198, 62%, 26%);
 }
 
+.design {
+    background: url(./Images-2/desktop/cherry-desktop.png) no-repeat center;
+    background-size: cover;
+}
 
+.photography {
+    background: url(./images-2/desktop/orange-desktop.png) no-repeat center;
+    background-size: cover;
+}
+
+.info,
+.testimonials {
+    padding: 60px 20px;
+}
 
 /* Testimonials section */
 
 .testimonials {
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
 }
 
 .testimonials > h3 {
+    font-size: 0.8em;
     color: hsl(210, 4%, 67%);
     letter-spacing: 5px;
 }
 
 
+.client {
+    margin-top: 64px;
+}
+
 .client img {
     width: 72px;
     border-radius: 50px;
-    
 }
 
 .client  p {
     color: hsl(213, 9%, 39%);
     line-height: 32px;
     font-size: 18px;
+}
+
+.client img,
+.client p {
+    margin-bottom: 32px;
 }
 
 .client h3 {
@@ -192,6 +223,9 @@ nav {
 
 /* Gallery Section */
 
+.image {
+    width: 50%;
+}
 
 .image img {
     width: 100%;
@@ -205,33 +239,32 @@ footer {
     width: 100%;
     height: 350px;
     background-color: #90D4C6;
-    text-align: center;
+    padding: 80px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
  footer > .logo > img {
     width: 170px;
     height: 32px;
-    margin-bottom: 40px;
 }
 
 footer > ul {
     width: 80%;
-    margin: 0 auto 88px auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 72px;
 }
 
 footer  a {
     color: hsl(168, 34%, 41%);
-    font-size: 18px;
-}
 
+}
 
 .socials {
     width: 50%;
-    margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
 }
@@ -248,69 +281,87 @@ footer  a {
 /* Mobile Style */
 
 @media only screen and (max-width: 480px) {
-   
-
-    .text {
-        text-align: center;
-        padding: 0 25px;
-    }
-
-    .text > h2 {
-        font-size: 32px;
-        margin-bottom: 24px;
-    }
-
-    .text > p {
-        margin-bottom: 32px;
-    }
-
-    .design {
-        background: url(./images/mobile/image-graphic-design.jpg) no-repeat center;
-        background-size: cover;
-    }
-
-    .photography {
-        background: url(./images/mobile/image-photography.jpg) no-repeat center;
-        background-size: cover;
-    }
-
-    .info,
-    .testimonials,
-    footer{
-        padding: 60px 20px;
-    }
-
-    .testimonials {
-        flex-direction: column;
-    }
-
-    .testimonials > h3 {
-        font-size: 16px;
-    }
-
-    .client {
-        margin-top: 64px;
-    }
-
-    .client img,
-    .client p {
-        margin-bottom: 32px;
-    }
-
-    .image {
-        width: 50%;
-    }
     
 }
+   
+
+
+
 
 
 
 /* Tablet Style */
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  
+    
+    header > h1 {
+        font-size: 2.55em;
+    }
+
+    .photo {
+        width: 50%;
+        order: 1;
+    }
+
+    .t-one {
+        order: 2;
+    }
 
     .design {
+        order: 3;
+    }
+
+    .t-two {
+        order: 4;
+    }
+
+    .photography {
+        order: 5;
+    }
+
+    .text > h2 {
+        font-size: 1.88em;
+    }
+
+
+    .testimonials {
+        order: 6;
+
+    }
+
+    .testimonials,
+    .info,
+    .text {
+        padding: 60px 40px;
+    }
+
+    .testimonials > h3 {
+        font-size: 1.2em;
+    }
+
+    .grid {
+        order: 7;
+    }
+
+    .image {
+        width: 25%;
+    }
+    .image img{
+        width: 100%;
+    }
+
+    footer {
+        order: 8;
+    }
+    
+    header {
+        height: 650px;
+        background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
+        background-size: cover;
+    }
+
+    .design {
+
         background: url(./images/desktop/image-graphic-design.jpg) no-repeat center;
         background-size: cover;
     }
@@ -320,14 +371,6 @@ footer  a {
         background-size: cover;
     }
 
-    .testimonials {
-        width: 100%;
-    }
-
-    .image {
-        width: 25%;
-    }
-
 
 }
 
@@ -335,7 +378,9 @@ footer  a {
 
 @media only screen and (min-width: 768px) {
 
-    body {
-        background-color: #5995DA
+    header {
+        height: 800px;
+        background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
+        background-size: cover;
     }
 }
