@@ -65,7 +65,7 @@ header {
 }
 
 header > h1 {
-    margin-top: 140px;
+    margin-top: 80px;
     text-align: center;
     letter-spacing: 6.25px;
     font-size: 2.22rem;
@@ -86,7 +86,7 @@ ul {
 
 .arrow-icon{
     display: block;
-    margin: 70px auto;
+    margin: 80px auto;
 }
 
 /* Photo section */
@@ -320,14 +320,10 @@ footer  a {
 
     .design {
         order: 3;
-        background: url(./images/desktop/image-graphic-design.jpg) no-repeat center;
-        background-size: cover;
     }
 
     .photography {
         order: 5;
-        background: url(./images/desktop/image-photography.jpg) no-repeat center;
-        background-size: cover;
     }
 
     .testimonials,
