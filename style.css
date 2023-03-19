@@ -282,17 +282,6 @@ footer  a {
 }
 
 
-/* Mobile Style */
-
-@media only screen and (max-width: 480px) {
-    
-}
-   
-
-
-
-
-
 
 /* Tablet Style */
 
@@ -475,6 +464,7 @@ footer  a {
     .image {
         width: 25%;
     }
+
     .image img{
         width: 100%;
     }
