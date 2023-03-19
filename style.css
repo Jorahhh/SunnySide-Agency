@@ -21,14 +21,20 @@ a {
     text-decoration: none;
 }
 
-
-ul {
-    list-style: none;
+nav  ul > li,
+footer ul > li {
+    display: inline;
+    margin-right: 48px;
 }
 
-.menu {
+ul > li:last-of-type {
+    margin-right: 0;
+}
+
+nav > ul > li{
     display: none;
 }
+
 
 .line {
     height: 2px;
@@ -38,7 +44,6 @@ ul {
 }
 
 .page {
-
     min-width: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -54,29 +59,34 @@ ul {
 
 header {
     width: 100%;
-    height: 538px;
+    height: 100vh;
     background: url(./Images-2/mobile/header-mobile.svg) no-repeat center;
     background-size: cover;
 }
 
 header > h1 {
-    letter-spacing: 6.25px;
-    font-size: 2.22em;
+    margin-top: 140px;
     text-align: center;
+    letter-spacing: 6.25px;
+    font-size: 2.22rem;
     color: #FFF;
-    margin-top: 45px;
 }
 
 nav {
-    padding: 35px 25px;
+    padding: 50px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+ul {
+    display: inline;
+    list-style: none;
+}
+
 .arrow-icon{
     display: block;
-    margin: 45px auto;
+    margin: 70px auto;
 }
 
 /* Photo section */
@@ -92,8 +102,7 @@ nav {
 
 .text {
     text-align: center;
-    padding: 0 25px;
-    height: 430px;
+    padding: 35px 25px;
 
     display: flex;
     flex-direction: column;
@@ -129,12 +138,12 @@ nav {
     height: 600px;
     flex-direction: column;
     justify-content: flex-end;
+    align-content: center;
     text-align: center;
-    
 }
 
 .info > h3 {
-    font-size: 28px;
+    font-size: 1.5rem;
     margin-bottom: 27px;
     letter-spacing: -0.2px;
 }
@@ -143,7 +152,11 @@ nav {
     font-size: 16px;
     line-height: 27px;
     letter-spacing: -0.11px;
+    max-width: 340px;
 }
+
+
+
 
 .design,
 .design h3 {
@@ -173,19 +186,24 @@ nav {
 /* Testimonials section */
 
 .testimonials {
-    flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
 }
 
 .testimonials > h3 {
-    font-size: 0.8em;
+    margin: 0 auto;
+    font-size: 1em;
     color: hsl(210, 4%, 67%);
     letter-spacing: 5px;
 }
-
+ .clients {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ }
 
 .client {
+    max-width: 350px;
+    margin: 0 auto;
     margin-top: 64px;
 }
 
@@ -252,12 +270,6 @@ footer {
     height: 32px;
 }
 
-footer > ul {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-}
-
 footer  a {
     color: hsl(168, 34%, 41%);
 
@@ -268,14 +280,6 @@ footer  a {
     display: flex;
     justify-content: space-between;
 }
-
-
-
-
-
-
-
-
 
 
 /* Mobile Style */
@@ -292,8 +296,13 @@ footer  a {
 
 /* Tablet Style */
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 805px) {
     
+    header {
+        background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
+        background-size: cover;
+    }
+
     header > h1 {
         font-size: 2.55em;
     }
@@ -307,26 +316,29 @@ footer  a {
         order: 2;
     }
 
-    .design {
-        order: 3;
-    }
-
     .t-two {
         order: 4;
-    }
-
-    .photography {
-        order: 5;
     }
 
     .text > h2 {
         font-size: 1.88em;
     }
 
-
     .testimonials {
+        
         order: 6;
+    }
 
+    .design {
+        order: 3;
+        background: url(./images/desktop/image-graphic-design.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .photography {
+        order: 5;
+        background: url(./images/desktop/image-photography.jpg) no-repeat center;
+        background-size: cover;
     }
 
     .testimonials,
@@ -353,34 +365,123 @@ footer  a {
     footer {
         order: 8;
     }
-    
-    header {
-        height: 650px;
-        background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
-        background-size: cover;
-    }
-
-    .design {
-
-        background: url(./images/desktop/image-graphic-design.jpg) no-repeat center;
-        background-size: cover;
-    }
-
-    .photography {
-        background: url(./images/desktop/image-photography.jpg) no-repeat center;
-        background-size: cover;
-    }
-
 
 }
 
+
+
+
 /* Desktop Style */
 
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 806px) {
+   * {
+    font-size: 24px;
+   }
+   
     header {
-        height: 800px;
         background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
         background-size: cover;
     }
+
+    header > h1 {
+        font-size: 3.11em;
+    }
+
+    nav {
+        padding: 48px 40px;
+    }
+
+    nav > ul > li {
+        display: inline;
+    }
+
+    nav  a {
+        color: #FFF;
+    }
+
+    .logo img {
+        width: 170px;
+        height: 33px;
+    }
+
+    li span > a {
+        border-radius: 50px;
+        background-color: #FFF;
+        padding: 16px 32px;
+        font-family: 'Fraunces', serif;
+        font-size: 15px;
+        color: hsl(212, 27%, 19%);
+        transition: all 0.2s ease;
+    }
+
+    li span > a:hover {
+        color: #FFF;
+        background-color: rgba(255,255,255, 0.3);;
+        transition: all 0.2s ease;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .photo {
+        width: 50%;
+    }
+
+    .text {
+        width: 50%;
+        text-align: left;
+        align-content: center;
+        font-size: 120%;
+    }
+
+    .text > h2,
+    .text > p {
+        max-width: 500px;
+    }
+
+
+    .t-one {
+        order: 0;
+    }
+
+    .p-one {
+        order: 1;
+    }
+
+    .p-two {
+        order: 2;
+    }
+
+    .t-two {
+        order: 3;
+    }
+
+    .info {
+        width: 50%;
+        order: 4;
+        font-size: 120%;
+    }
+
+    .testimonials {
+        padding: 120px 40px;
+        order: 5;
+    }
+
+    .grid {
+        order: 6;
+    }
+
+    .image {
+        width: 25%;
+    }
+    .image img{
+        width: 100%;
+    }
+
+    footer {
+        order: 7;
+    }
+
+
 }
