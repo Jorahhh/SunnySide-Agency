@@ -60,7 +60,7 @@ nav > ul > li{
 header {
     width: 100%;
     height: 100vh;
-    background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
+    background: url(./Images-2/mobile/header-mobile.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -73,7 +73,7 @@ header > h1 {
 }
 
 nav {
-    padding: 50px 25px;
+    padding: 30px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@ ul {
 
 .arrow-icon{
     display: block;
-    margin: 80px auto;
+    margin: 40px auto;
 }
 
 /* Photo section */
@@ -107,6 +107,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .text > h2 {
@@ -124,11 +125,36 @@ ul {
     margin-bottom: 32px;
 }
 
-.call-to-action {
-    font-size: 15px;
+
+.call-to-action div {
     letter-spacing: 1px;
     cursor: pointer;
+    z-index: 0;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 125px;
+    position: relative;
 }
+
+.call-to-action div::after {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    top: 12px;
+    left: 0;
+    width: 125px;
+    height: 10px;
+    z-index: -1;
+} 
+
+.t-one > .call-to-action div::after {
+    background-color: hsl(51, 100%, 49%);
+}
+
+.t-two > .call-to-action div::after {
+    background-color: hsl(7, 99%, 70%);
+}
+
 
 
 
@@ -283,7 +309,7 @@ footer  a {
 
 /* Tablet Style */
 
-@media only screen and (min-width: 481px) and (max-width: 805px) {
+@media only screen and (min-width: 481px) and (max-width: 900px) {
     
     header {
         background: url(./Images-2/desktop/header-desktop.svg) no-repeat center;
@@ -356,7 +382,7 @@ footer  a {
 
 /* Desktop Style */
 
-@media only screen and (min-width: 806px) {
+@media only screen and (min-width: 901px) {
    
     * {
     font-size: 24px;
@@ -381,6 +407,11 @@ footer  a {
 
     nav  a {
         color: #FFF;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        color: hsl(212, 27%, 19%);
     }
 
     .logo img {
@@ -422,6 +453,10 @@ footer  a {
     .text > h2,
     .text > p {
         max-width: 500px;
+    }
+
+    .call-to-action div {
+        margin: 0;
     }
 
 
