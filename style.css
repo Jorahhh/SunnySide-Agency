@@ -33,6 +33,26 @@ ul > li:last-of-type {
 
 
 
+.menu li {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.menu li:last-of-type {
+    margin-bottom: 0;
+}
+
+.menu span a{
+    border-radius: 50px;
+    background-color: hsl(51, 100%, 49%);
+    padding: 16px 32px;
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: hsl(212, 27%, 19%);
+}
+
+
+
 .line {
     height: 2px;
     width: 24px;
@@ -151,8 +171,6 @@ ul {
 .t-two > .call-to-action div::after {
     background-color: hsl(7, 99%, 70%);
 }
-
-
 
 
 /* Info Section */
@@ -310,35 +328,17 @@ footer  a {
         position: absolute;
         background-color: #FFF;
         text-align: center;
-        width: 95%;
+        width: 82%;
         top: 15%;
-        left: 2.5%;
+        left: 9%;
         padding: 15%;
-
+    
         display: flex;
         flex-direction: column;
     }
-
+    
     .menu a {
         color: hsl(210, 4%, 67%);
-    }
-
-    .menu li {
-        width: 100%;
-        margin-bottom: 32px;
-    }
-
-    .menu li:last-of-type {
-        margin-bottom: 0;
-    }
-
-    .menu span a{
-        border-radius: 50px;
-        background-color: hsl(51, 100%, 49%);
-        padding: 16px 32px;
-        font-family: 'Fraunces', serif;
-        font-size: 15px;
-        color: hsl(212, 27%, 19%);
     }
 }
 
@@ -353,6 +353,11 @@ footer  a {
 
     header > h1 {
         font-size: 2.55em;
+    }
+
+    .menu {
+        width: 70%;
+        left: 15%;
     }
 
     .photo {
