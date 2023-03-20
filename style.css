@@ -31,8 +31,6 @@ ul > li:last-of-type {
     margin-right: 0;
 }
 
-
-
 .menu li {
     width: 100%;
     margin-bottom: 32px;
@@ -50,8 +48,6 @@ ul > li:last-of-type {
     font-size: 15px;
     color: hsl(212, 27%, 19%);
 }
-
-
 
 .line {
     height: 2px;
@@ -324,17 +320,42 @@ footer  a {
 
 @media only screen and (max-width: 900px)  {
     
+    .hamburger {
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .line.active:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: all 0.2s ease;
+    }
+    .line.active:nth-child(2){
+        opacity: 0.01;
+        transition: all 0.2s ease;
+    }
+    .line.active:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: all 0.2s ease;
+    }
+
     .menu {
         position: absolute;
         background-color: #FFF;
         text-align: center;
         width: 82%;
         top: 15%;
-        left: 9%;
+        left: -100%;
         padding: 15%;
     
         display: flex;
         flex-direction: column;
+        transition: all 0.4s ease;
+    }
+
+    .menu.active{
+        top: 15%;
+        left: 9%;
+        transition: all 0.4s ease;
     }
     
     .menu a {
@@ -353,11 +374,6 @@ footer  a {
 
     header > h1 {
         font-size: 2.55em;
-    }
-
-    .menu {
-        width: 70%;
-        left: 15%;
     }
 
     .photo {
@@ -459,17 +475,11 @@ footer  a {
         height: 33px;
     }
 
-    li span > a {
-        border-radius: 50px;
+    .menu span a{
         background-color: #FFF;
-        padding: 16px 32px;
-        font-family: 'Fraunces', serif;
-        font-size: 15px;
-        color: hsl(212, 27%, 19%);
-        transition: all 0.2s ease;
     }
 
-    li span > a:hover {
+   .menu span a:hover {
         color: #FFF;
         background-color: rgba(255,255,255, 0.3);;
         transition: all 0.2s ease;
