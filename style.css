@@ -78,7 +78,7 @@ header {
 }
 
 header > h1 {
-    margin-top: 80px;
+    margin-top: 120px;
     text-align: center;
     letter-spacing: 6.25px;
     font-size: 2.22rem;
@@ -99,7 +99,7 @@ ul {
 
 .arrow-icon{
     display: block;
-    margin: 40px auto;
+    margin: 80px auto;
 }
 
 /* Photo section */
@@ -161,18 +161,26 @@ ul {
 } 
 
 .t-one > .call-to-action div::after {
-    background-color: hsl(51, 100%, 49%);
+    background-color: hsl(51, 100%, 49%, 0.5);
+    -webkit-transition: all 0.2s 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .t-two > .call-to-action div::after {
-    background-color: hsl(7, 99%, 70%);
+    background-color: hsl(7, 99%, 70%, 0.5);
+    -webkit-transition: all 0.2s 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
+
+
+
 
 
 /* Info Section */
 
 .info {
-    height: 600px;
+    min-height: 600px;
     flex-direction: column;
     justify-content: flex-end;
     align-content: center;
@@ -307,14 +315,14 @@ footer {
 
 footer  a {
     color: hsl(168, 34%, 41%);
-
 }
 
 .socials {
-    width: 50%;
+    width: 250px;
     display: flex;
     justify-content: space-between;
 }
+
 
 /* Menu Mobile */
 
@@ -468,6 +476,8 @@ footer  a {
 
     nav a:hover {
         color: hsl(212, 27%, 19%);
+        -webkit-transition: all 0.2s 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 
     .logo img {
@@ -477,6 +487,7 @@ footer  a {
 
     .menu span a{
         background-color: #FFF;
+
     }
 
    .menu span a:hover {
@@ -509,6 +520,25 @@ footer  a {
         margin: 0;
     }
 
+    .call-to-action div:hover {
+        scale: 1.1;
+        -webkit-transition: all 0.2s 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        
+    }
+    
+    .t-one > .call-to-action div:hover::after {
+        background-color: hsl(51, 100%, 49%);
+        -webkit-transition: all 0.2s 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    
+    .t-two > .call-to-action div:hover::after {
+        background-color: hsl(7, 99%, 70%);
+        -webkit-transition: all 0.2s 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
 
     .t-one {
         order: 0;
@@ -530,6 +560,7 @@ footer  a {
         width: 50%;
         order: 4;
         font-size: 120%;
+
     }
 
     .testimonials {
@@ -553,5 +584,14 @@ footer  a {
         order: 7;
     }
 
+    footer a:hover {
+        color: #FFF;
+        -webkit-transition: all 0.2s 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+   .socials img {
+    cursor: pointer;
+   }
 
 }
