@@ -323,6 +323,10 @@ footer  a {
     justify-content: space-between;
 }
 
+footer ul {
+    min-width: 300px;
+}
+
 
 /* Menu Mobile */
 
